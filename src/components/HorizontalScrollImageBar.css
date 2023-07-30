@@ -1,0 +1,38 @@
+/* HorizontalScrollImageBar.css */
+.scroll-image-bar {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.scroll-container {
+  display: flex;
+  padding: 10px;
+  transition: transform 0.3s ease;
+  justify-content: center; /* Center the images horizontally */
+  width: 100%;
+}
+
+.scroll-container img {
+  /* width: calc(100vw - 10px); Half of viewport width minus 20px for equal margins */
+  width: 200px;
+  max-height: 100%; /* Ensure the height of images does not exceed the container */
+  margin: 0 10px; /* Set the equal margins on the left and right */
+}
+
+.scroll-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 80px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.scroll-icon {
+  font-size: 24px;
+  color: navy;
+}
+
+.scroll-icon:hover {
+  color: blue;
+}

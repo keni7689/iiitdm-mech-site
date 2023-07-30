@@ -1,0 +1,73 @@
+---
+import Navbar from "../components/Navbar.jsx";
+import HorizontalScrollImageBar from "../components/HorizontalScrollImageBar.jsx";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const images = [
+  // img1,
+  // img2,
+  // img3,
+  // img4,
+  {
+    src: "/mechImg1.jpg",
+    // width: '900px',
+    height: "400px",
+  },
+  {
+    src: "/mechImg2.jpg",
+    // width: '800px',
+    width: "100%",
+    height: "400px",
+  },
+  {
+    src: "/mechImg3.jpg",
+    // width: '350px',
+    height: "400px",
+  },
+  {
+    src: "/mechImg4.jpg",
+    // width: '500px',
+    height: "400px",
+  },
+  // Add your image URLs here
+];
+---
+
+<BaseLayout>
+
+<div class="gall"><img src="/clgUpBar.png" alt="" /></div>
+{/* <NavScrollExample/> */}
+<Navbar />
+<br />
+<br />
+<br />
+{/* <ImageSlider/> */}
+<HorizontalScrollImageBar client:idle images={images} />
+</BaseLayout>
+
+<style>
+  body {
+    overflow-x: hidden;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .gall {
+    /* width: 500px; */
+    /* height:200px;
+  background-size: contain;
+  background-repeat: no-repeat; */
+    /* margin-right: 2000px; */
+    /* margin: 0 auto; */
+    width: 100%;
+    max-width: 10px;
+    height: auto;
+    /* margin: 0 auto; Center horizontally */
+    /* margin-right: 350px; */
+    margin-top: -15px;
+    transform: scale(0.85);
+  }
+</style>

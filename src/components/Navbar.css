@@ -1,0 +1,96 @@
+/* Navbar styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  color: navy;
+  padding: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow to the bottom of the navbar */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.logo {
+  height: 80px; /* Adjust the height as needed */
+  margin-right: 10px;
+}
+
+.college-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.college-text {
+  font-size: 20px;
+}
+
+.kancheepuram-text {
+  font-size: 14px;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: navy;
+}
+
+.nav-link {
+  cursor: pointer;
+  position: relative;
+}
+
+/* Dropdown styles */
+.nav-dropdown {
+  position: absolute;
+  top: 30px; /* Adjust the distance from the nav-link as needed */
+  left: 0;
+  background-color: white;
+  color: navy;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  z-index: 1;
+  display: none;
+  width: max-content;
+}
+
+.nav-link:focus .nav-dropdown,
+.nav-link:focus-within .nav-dropdown {
+  display: block;
+}
+
+.nav-option {
+  display: block;
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+/* Search button styles */
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Push the search button to the right */
+}
+
+.search-button {
+  height: 40px;
+  width: 100px;
+  background-color: navy;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 20px; /* Add distance between the last text and the search button */
+}
+
+/* Search dropdown styles (no dropdown, but you can keep the styles if needed for future changes) */
+.search-dropdown {
+  /* No styles for the search dropdown, as it's not required */
+}
+
+.search-option {
+  /* No styles for the search options, as it's not required */
+}
