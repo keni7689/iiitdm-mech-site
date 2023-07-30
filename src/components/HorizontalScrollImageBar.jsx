@@ -1,5 +1,5 @@
-import  { useRef, useState } from 'react';
-import './HorizontalScrollImageBar.css';
+import { useRef, useState } from "react";
+import "./HorizontalScrollImageBar.css";
 
 const HorizontalScrollImageBar = ({ images }) => {
   const scrollContainerRef = useRef(null);
@@ -11,7 +11,7 @@ const HorizontalScrollImageBar = ({ images }) => {
       scrollContainerRef.current.scrollBy({
         top: 0,
         left: -window.innerWidth / 2,
-        behavior: 'auto',
+        behavior: "smooth",
       });
     }
   };
@@ -22,7 +22,7 @@ const HorizontalScrollImageBar = ({ images }) => {
       scrollContainerRef.current.scrollBy({
         top: 0,
         left: window.innerWidth / 2,
-        behavior: 'auto',
+        behavior: "smooth",
       });
     }
   };
@@ -30,16 +30,16 @@ const HorizontalScrollImageBar = ({ images }) => {
   return (
     <div className="scroll-image-bar">
       <div className="scroll-icons" onClick={handleScrollLeft}>
-        <div className="scroll-icon">{'<'}</div>
+        <div className="scroll-icon">{"<"}</div>
       </div>
       <div className="scroll-container" ref={scrollContainerRef}>
         {images.map((image, index) => (
           <img
             key={index}
-            src={image.src}
+            src={`/opt/mechImg${index + 1}.webp`}
             alt={`Image ${index + 1}`}
             style={{
-              display: currentImageIndex === index ? 'inline' : 'none',
+              display: currentImageIndex === index ? "inline" : "none",
               width: image.width,
               height: image.height,
             }}
@@ -47,7 +47,7 @@ const HorizontalScrollImageBar = ({ images }) => {
         ))}
       </div>
       <div className="scroll-icons" onClick={handleScrollRight}>
-        <div className="scroll-icon">{'>'}</div>
+        <div className="scroll-icon">{">"}</div>
       </div>
     </div>
   );

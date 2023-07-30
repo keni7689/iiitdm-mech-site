@@ -9,23 +9,19 @@ const images = [
   // img3,
   // img4,
   {
-    src: "/mechImg1.jpg",
     // width: '900px',
     height: "400px",
   },
   {
-    src: "/mechImg2.jpg",
     // width: '800px',
     width: "100%",
     height: "400px",
   },
   {
-    src: "/mechImg3.jpg",
     // width: '350px',
     height: "400px",
   },
   {
-    src: "/mechImg4.jpg",
     // width: '500px',
     height: "400px",
   },
@@ -34,15 +30,14 @@ const images = [
 ---
 
 <BaseLayout>
-
-<div class="gall"><img src="/clgUpBar.png" alt="" /></div>
-{/* <NavScrollExample/> */}
-<Navbar />
-<br />
-<br />
-<br />
-{/* <ImageSlider/> */}
-<HorizontalScrollImageBar client:idle images={images} />
+  <div class="gall"><img src="/clgUpBar.png" alt="" /></div>
+  {/* <NavScrollExample/> */}
+  <Navbar />
+  <br />
+  <br />
+  <br />
+  {/* <ImageSlider/> */}
+  <HorizontalScrollImageBar client:idle images={images} />
 </BaseLayout>
 
 <style>
