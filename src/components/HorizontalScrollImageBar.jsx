@@ -35,6 +35,7 @@ const HorizontalScrollImageBar = ({ images }) => {
       <div className="scroll-container" ref={scrollContainerRef}>
         {images.map((image, index) => (
           <img
+            loading="lazy"
             key={index}
             src={`/opt/mechImg${index + 1}.webp`}
             alt={`Image ${index + 1}`}
