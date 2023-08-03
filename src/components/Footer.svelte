@@ -5,12 +5,28 @@
 
   const footer = {
     quickLinks: {
-      title: "Quick Link",
-      links: [{ title: "Madarchod", href: "muth.com" }],
+      title: "Useful Link",
+      links: [{ title: "NIRF", href: "muth.com" }],
+      links: [{ title: "New", href: "muth.com" }],
+      links: [{ title: "NIRF", href: "muth.com" }],
+      links: [{ title: "NIRF", href: "muth.com" }],
+      links: [{ title: "NIRF", href: "muth.com" }],
     },
     usefulLinks: {
-      title: "Quick Link",
-      links: [{ title: "Madarchod", href: "muth.com" }],
+      title: "Students and Website",
+      links: [{ title: "Acdemic Calender", href: "muth.com" }],
+      links: [{ title: "Acdemic Calender", href: "muth.com" }],
+      links: [{ title: "Acdemic Calender", href: "muth.com" }],
+      links: [{ title: "Acdemic Calender", href: "muth.com" }],
+      links: [{ title: "Acdemic Calender", href: "muth.com" }],
+    },
+    QuickLinks: {
+      title: "Students and Website",
+      links: [{ title: "Acdemic Calender", href: "muth.com" }],
+      links: [{ title: "Acdemic Calender", href: "muth.com" }],
+      links: [{ title: "Acdemic Calender", href: "muth.com" }],
+      links: [{ title: "Acdemic Calender", href: "muth.com" }],
+      links: [{ title: "Acdemic Calender", href: "muth.com" }],
     },
   };
 
