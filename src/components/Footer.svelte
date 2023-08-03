@@ -33,7 +33,7 @@
   const social = [];
 </script>
 
-<footer class="w-full border-t border-base bg-muted">
+<footer class="w-full border-t border-base bg-gray-100">
   <div class="grid grid-cols-4 py-10">
     {#each Object.entries(footer) as [_, item]}
       <div class="flex flex-col items-center gap-1">

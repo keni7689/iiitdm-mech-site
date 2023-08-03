@@ -2,6 +2,7 @@
 import Navbar from "../components/Navbar.jsx";
 import HorizontalScrollImageBar from "../components/HorizontalScrollImageBar.jsx";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import CustomScrollbar from "../components/CustomScrollbar.jsx";
 // import DraggableImageSlider from "../components/DraggableImageSlider.jsx";
 import DraggableImageSlider from "../components/DraggableImageSlider.jsx";
 
@@ -32,6 +33,9 @@ const images = [
 ---
 
 <BaseLayout>
+  <div class="custom-scrollbar">
+    <CustomScrollbar />
+  </div>
   <div class="gall"><img src="/clgUpBar.png" alt="" /></div>
   {/* <NavScrollExample/> */}
   <Navbar />
@@ -41,9 +45,42 @@ const images = [
   {/* <ImageSlider/> */}
   <HorizontalScrollImageBar client:idle images={images} />
   <!-- <DraggableImageSlider /> -->
+  <div class="home-section">
+    <a class="home-link" href="#">Home</a>
+    <h1 class="main-heading">
+      Welcome to the Department of Mechanical Engineering
+    </h1>
+    <hr class="navy-line" />
+    <p class="normal-text">PhD Admissions (2022)</p>
+    <p class="normal-text">Syllabus</p>
+    <h1 class="news-heading">News</h1>
+    <hr class="navy-line" />
+    <p class="news-content">
+      Department welcomes Dr K. Jayabal as the new Head of the Department from
+      01/07/2022
+    </p>
+    <p class="news-content">
+      Department of Mechanical Engineering receives FIST support to set up
+      imaging facilities for research, teaching and outreach.
+    </p>
+    <p class="news-content">
+      Dr Vikas Kumar joins the mechanical engineering department at IIITDM
+      Kancheepuram
+    </p>
+  </div>
 </BaseLayout>
 
 <style>
+  @font-face {
+    font-family: "CustomFont"; /* Give your custom font a name */
+    src: url("../fonts/your-custom-font.woff2") format("woff2"),
+      url("../fonts/your-custom-font.woff") format("woff"); /* Path to your font files */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  /* Rest of your existing CSS */
+
   body {
     overflow-x: hidden;
   }
@@ -67,5 +104,57 @@ const images = [
     /* margin-right: 350px; */
     margin-top: -5px;
     /* transform: scale(0.85); */
+  }
+
+  .home-section {
+    padding: 20px;
+    background-color: #ffffff;
+    font-family: "CustomFont", sans-serif;
+  }
+
+  .home-link {
+    font-size: 32px; /* Bigger font size than h1 */
+    font-weight: bold;
+    font-family: "CustomFont", sans-serif;
+    color: navy;
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+
+  .main-heading {
+    font-size: 24px; /* Normal h1 font size */
+    font-weight: bold;
+    font-family: "CustomFont", sans-serif;
+    color: orange; /* Default color for h1 */
+    margin-top: 10px;
+  }
+
+  .normal-text {
+    font-size: 18px; /* Font size for normal text */
+    color: navy; /* Navy blue color */
+    margin-top: 5px;
+    font-family: "CustomFont", sans-serif;
+  }
+
+  .news-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: orange;
+    font-family: "CustomFont", sans-serif;
+    margin-top: 20px;
+  }
+
+  .navy-line {
+    border: none;
+    height: 2px;
+    background-color: navy;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+
+  .news-content {
+    font-size: 16px;
+    color: navy; /* Navy blue color */
+    margin-bottom: 15px;
   }
 </style>

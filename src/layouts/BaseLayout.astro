@@ -1,5 +1,6 @@
 ---
 import Footer from "../components/Footer.svelte";
+import CustomScrollbar from "../components/CustomScrollbar.jsx";
 ---
 
 <!DOCTYPE html>
@@ -25,7 +26,7 @@ import Footer from "../components/Footer.svelte";
   <body>
     <div id="root">
       <slot />
-
+      <CustomScrollbar />
       <Footer />
     </div>
   </body>
