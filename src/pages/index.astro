@@ -2,6 +2,8 @@
 import Navbar from "../components/Navbar.jsx";
 import HorizontalScrollImageBar from "../components/HorizontalScrollImageBar.jsx";
 import BaseLayout from "../layouts/BaseLayout.astro";
+// import DraggableImageSlider from "../components/DraggableImageSlider.jsx";
+import DraggableImageSlider from "../components/DraggableImageSlider.jsx";
 
 const images = [
   // img1,
@@ -38,6 +40,7 @@ const images = [
   <br />
   {/* <ImageSlider/> */}
   <HorizontalScrollImageBar client:idle images={images} />
+  <!-- <DraggableImageSlider /> -->
 </BaseLayout>
 
 <style>
@@ -58,11 +61,11 @@ const images = [
     /* margin-right: 2000px; */
     /* margin: 0 auto; */
     width: 100%;
-    max-width: 10px;
+    /* max-width: 10px; */
     height: auto;
     /* margin: 0 auto; Center horizontally */
     /* margin-right: 350px; */
-    margin-top: -15px;
-    transform: scale(0.85);
+    margin-top: -25px;
+    /* transform: scale(0.85); */
   }
 </style>
